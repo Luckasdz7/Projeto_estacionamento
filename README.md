@@ -2,9 +2,9 @@
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-![Swing](https://img.shields.io/badge/Java_Swing-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 
-Este projeto é uma aplicação desktop desenvolvida em **Java** com interface gráfica (Swing) para o gerenciamento de um estacionamento. O sistema permite o controle completo do cadastro de clientes (pessoas) e a vinculação de seus respectivos veículos, utilizando um banco de dados relacional MySQL para a persistência das informações.
+
+Este projeto é uma aplicação desktop desenvolvida em **Java** com interface gráfica para o gerenciamento de um estacionamento. O sistema permite o controle completo do cadastro de clientes (pessoas) e a vinculação de seus respectivos veículos, utilizando um banco de dados relacional MySQL para a persistência das informações.
 
 ## 🎯 Objetivos do Projeto
 
@@ -20,7 +20,7 @@ O projeto foi construído utilizando um padrão de arquitetura em camadas, separ
 * **MODEL (Modelos de Domínio):** Contém as classes `Pessoa` e `Veiculo` que representam as entidades do sistema e refletem as tabelas do banco de dados[cite: 1, 2]. A classe Pessoa possui atributos como nome e CPF[cite: 1]. A classe Veículo gerencia detalhes como modelo, marca, placa, ano e está vinculada a um objeto Pessoa[cite: 2].
 * **DAO (Data Access Object):** As classes `PessoaDAO` e `DAOveiculos` são responsáveis exclusivas pela comunicação com o banco de dados[cite: 7, 8]. Elas executam instruções SQL complexas (INSERT, UPDATE, DELETE, SELECT) utilizando `PreparedStatement` para garantir a segurança das queries[cite: 7, 8].
 * **BO (Business Object):** As classes `BOpessoa` e `BOveiculos` funcionam como uma camada de regras de negócio e controle intermediário entre a interface gráfica e o banco de dados (DAO)[cite: 9, 10].
-* **FORMS (Visão/View):** Desenvolvidas com Java Swing, as classes `formPessoa` e `formVeiculo` fornecem a interface de usuário. Elas possuem formulários integrados com botões de ação (Salvar, Editar, Excluir, Novo) e utilizam elementos como `JComboBox` para buscas dinâmicas[cite: 4, 6].
+* **FORMS (Visão/View):** Desenvolvidas com JForm, as classes `formPessoa` e `formVeiculo` fornecem a interface de usuário. Elas possuem formulários integrados com botões de ação (Salvar, Editar, Excluir, Novo) e utilizam elementos como `JComboBox` para buscas dinâmicas[cite: 4, 6].
 * **UTIL:** Contém a classe de configuração `Conexao`, que implementa o padrão JDBC para estabelecer a conexão com o banco de dados MySQL (`estacionamento`) utilizando o usuário `root`.
 
 ## ⚙️ Funcionalidades
