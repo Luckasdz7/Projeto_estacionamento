@@ -121,8 +121,10 @@ public class formVeiculo extends javax.swing.JFrame {
         btnEditar = new javax.swing.JButton();
         btnExcluir = new javax.swing.JButton();
         btnNovo = new javax.swing.JButton();
+        btnsair1 = new javax.swing.JButton();
+        btnsair = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -302,6 +304,9 @@ public class formVeiculo extends javax.swing.JFrame {
         btnNovo.setText("Novo");
         btnNovo.addActionListener(this::btnNovoActionPerformed);
 
+        btnsair1.setText("SAIR");
+        btnsair1.addActionListener(this::btnsair1ActionPerformed);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -315,19 +320,25 @@ public class formVeiculo extends javax.swing.JFrame {
                 .addComponent(btnExcluir)
                 .addGap(18, 18, 18)
                 .addComponent(btnNovo)
-                .addContainerGap(294, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnsair1)
+                .addGap(15, 15, 15))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(23, 23, 23)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalvar)
                     .addComponent(btnEditar)
                     .addComponent(btnExcluir)
-                    .addComponent(btnNovo))
+                    .addComponent(btnNovo)
+                    .addComponent(btnsair1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
+
+        btnsair.setText("SAIR");
+        btnsair.addActionListener(this::btnsairActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -342,12 +353,17 @@ public class formVeiculo extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 6, Short.MAX_VALUE)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(322, 322, 322)
+                    .addComponent(btnsair)
+                    .addContainerGap(323, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -360,6 +376,11 @@ public class formVeiculo extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(276, 276, 276)
+                    .addComponent(btnsair, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(288, Short.MAX_VALUE)))
         );
 
         pack();
@@ -463,6 +484,17 @@ public class formVeiculo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtintensPessoaActionPerformed
 
+    private void btnsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsairActionPerformed
+        // TODO add your handling code here:
+        // formPessoa pessoa = new
+        this.dispose();
+    }//GEN-LAST:event_btnsairActionPerformed
+
+    private void btnsair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsair1ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_btnsair1ActionPerformed
+
      public void acaoCriar(boolean b){
         btnSalvar.setEnabled(b);
     }
@@ -510,6 +542,8 @@ public class formVeiculo extends javax.swing.JFrame {
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnNovo;
     private javax.swing.JButton btnSalvar;
+    private javax.swing.JButton btnsair;
+    private javax.swing.JButton btnsair1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
